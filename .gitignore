@@ -1,0 +1,9 @@
+lib*.jnilib
+lib*.so
+*.o
+main
+*/main
+*/*/main
+*/*/*/main
+*/*/*/*/main
+*/*/*/*/*/main
