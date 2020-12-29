@@ -1,8 +1,9 @@
-system = linux
+#system = linux
+system = macos
 
 ifeq (macos, $(system))
 
-headersPath = /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
+headersPath = /Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home
 libhello.jnilib: Hello.cpp
 	g++ -I$(headersPath)/include -I$(headersPath)/include/darwin \
 	-dynamiclib Hello.cpp -o libhello.jnilib
@@ -17,3 +18,4 @@ libhello.so: Hello.cpp
 	-o libhello.so Hello.cpp
 
 endif
+
