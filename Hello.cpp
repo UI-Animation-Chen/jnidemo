@@ -193,6 +193,11 @@ JNIEXPORT void JNICALL Java_Hello_setArr
  */
 JNIEXPORT jobjectArray JNICALL Java_Hello_getStrArr
   (JNIEnv *env, jobject jobj, jint jlen) {
+
+    int i = 0x01020304;
+    char *pi = (char *)&i;
+    std::cout << "cpp, (int)*pi: " << (int)*pi << "\n";
+
 	jobjectArray result;
 	jclass strCls = env->FindClass("Ljava/lang/String;");
 	if (strCls == NULL) {
